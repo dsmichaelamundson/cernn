@@ -1,0 +1,9 @@
+{% assign tracks = site.tracks | sort: "order" %}
+
+<ul class="tracks">
+{% for track in tracks %}
+  <li>
+    {% include soundcloud.html scid=track.scid %}
+  </li>
+{% endfor %}
+</ul>
